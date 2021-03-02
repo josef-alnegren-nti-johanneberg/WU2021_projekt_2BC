@@ -7,35 +7,44 @@ body {
 .drop-down{
     height: 50vh;
     width: 40vw;
-    background: hotpink;
+    background: #d1d1d1;
     position: fixed;
     top: -100vh;
     left: 0;
-    transition: left 0.3s;
-    box-shadow: -15px 10px 10px -10px rgba(0,0,0,0.75);
+    box-shadow: -15px 10px 10px -10px rgba(0,0,0,0.5);
     z-index: 9;
+    transition: ease-out 0.3s;
     display: flex;
 }
 
 .show {
-    top: 75px;
+    top: 50px;
+}
+
+.rotate {
+    transform: rotate(-180deg);
 }
 
 .spread_item {
     display: flex;
+    color: #D24848;
+    font-weight: bold;
+    transition: 0.1s;
 }
 
 .spread_item:hover {
-    background: rgb(196, 75, 135);
+    background: #a1a1a1;
+    
 }
 
 .drop_button {
-    max-width: 50px;
+    max-width: 90px;
     z-index: 20;
     position: fixed;
     top: 20px;
     left: 25px;
     cursor: pointer;
+    transition: ease-out 0.3s;
 }
 
 .grid_wrapper {
@@ -57,7 +66,8 @@ body {
 
 .header {
     grid-area: he;
-    background-color: wheat;
+    background-color: #F1F1F1;
+    color: #3B3B6B;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -73,14 +83,13 @@ body {
 
 .article {
     text-align: left;
-    font-size: 35px;
     width: 100vw;
     max-height: 100vh;
-    border: black 8px;
-    background-color: yellow;
+    background-color: #d1d1d1;
     justify-content: center;
     padding: 20px;
     padding-left: 50px;
+    box-shadow: -15px 0px 30px 5px rgba(0,0,0,0.4)
 }
 
 .footer {
@@ -111,6 +120,7 @@ a:active {
         justify-content: space-around;
         align-items: center;
         box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
+        margin-left: 20px;
     }
 
     .spread_item {
@@ -118,6 +128,10 @@ a:active {
         height: 10vh;
         justify-content: center;
         align-items: center;
+    }
+
+    .article {
+        font-size: 3.2vw;
     }
 
 }
@@ -148,6 +162,7 @@ a:active {
         z-index: 11;
         padding-top: 0;
         box-shadow: -15px 10px 10px -10px rgba(0,0,0,0.75);
+        margin: 0;
     }
 
     .spread_item {
@@ -163,5 +178,9 @@ a:active {
 
     .header {
         top: 50px;
+    }
+
+    .article {
+        font-size: 35px;
     }
 }
