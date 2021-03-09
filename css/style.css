@@ -21,14 +21,6 @@ body::-webkit-scrollbar {
     display: flex;
 }
 
-.show {
-    top: 50px;
-}
-
-.rotate {
-    transform: rotate(-180deg);
-}
-
 .spread_item {
     display: flex;
     color: #D24848;
@@ -59,7 +51,7 @@ body::-webkit-scrollbar {
     "fo"
     ;
     grid-template-columns: 100vw;
-    grid-template-rows: 100px 300vh 50px;
+    grid-template-rows: 100px auto 100px;
     background-color: #3B3B6B;
 }
 
@@ -86,7 +78,7 @@ body::-webkit-scrollbar {
 
 .section {
     grid-area: se;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -103,9 +95,21 @@ body::-webkit-scrollbar {
     box-shadow: -15px 0px 30px 5px rgba(0,0,0,0.4)
 }
 
+.prime_article {
+    width: 100vw;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
 .footer {
     grid-area: fo;
-    background-color: teal;
+    background-color: #a1a1a1;
+    color: #3B3B6B;
+    text-align: center;
+    padding-top: 2vh;
+    font-size: 2vw;
 }
 
 a {
@@ -116,23 +120,24 @@ a:active {
     color: white;
 }
 
-/*----- PRODUKT -----*/
 .hyperlink {
     color: blue;
     font-style: italic;
 }
 
+/*----- TOGGLE-KLASSER -----*/
 
+.show {
+    top: 50px;
+}
 
+.rotate {
+    transform: rotate(-180deg);
+}
 
-
-
-
-
-
-
-
-
+.prime_article.fade {
+    opacity: 1;
+}
 
 
 /*--------------------------------- RESPONSIVITET ------------------------------*/
@@ -155,6 +160,7 @@ a:active {
     .subtitle {
         font-size: 50px;
         margin-top: -13vh;
+        transition: ease-in 1s;
     }
 
     #homeSection {
@@ -162,7 +168,7 @@ a:active {
     }
 
     .section {
-        margin-top: -20vh;
+        margin: 0;
     }
 
     .drop-down {
@@ -185,6 +191,29 @@ a:active {
     .article {
         font-size: 3.3vw;
         width: 85vw;
+        margin-bottom: 10vh;
+        
+    }
+
+    .prime_article {
+        font-size: 3.3vw;
+        text-align: left;
+        max-height: fit-content;
+        color: #F1F1F1;
+        background-color: rgba(0,0,0,0.2);
+        justify-content: center;
+        padding: 20px;
+        padding-bottom: 5vh;    
+        padding-left: 50px;
+        box-shadow: -15px 0px 30px 5px rgba(0,0,0,0.4);
+        margin-bottom: 10vh;
+        opacity: 0;
+        transition: ease-in 1s;
+    }
+
+    .test {
+        max-width: 50%;
+        
     }
 
 }
@@ -200,7 +229,7 @@ a:active {
     "se"
     "fo"
     ;
-    grid-template-rows: 100px 50px 300vh 50px;
+    grid-template-rows: 100px 50px auto 100px;
     }
 
     .drop-down {
@@ -242,14 +271,11 @@ a:active {
     .subtitle {
         font-size: 60px;
         margin-top: -20vh;
+        transition: ease-in 1s;
     }
 
     #header_HEM {
         display: none;
-    }
-
-    .section {
-        margin: 0;
     }
 
     .article {
@@ -257,4 +283,19 @@ a:active {
         font-size: 35px;
     }
 
+    .prime_article {
+        font-size: 3.3vw;
+        text-align: left;
+        max-height: fit-content;
+        color: #F1F1F1;
+        background-color: rgba(0,0,0,0.2);
+        justify-content: center;
+        padding: 20px;
+        padding-bottom: 5vh;    
+        padding-left: 10vw;
+        box-shadow: -15px 0px 30px 5px rgba(0,0,0,0.4);
+        margin-bottom: 10vh;
+        opacity: 0;
+        transition: ease-in 1s;
+    }
 }
