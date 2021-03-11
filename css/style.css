@@ -8,6 +8,18 @@ body::-webkit-scrollbar {
     width: 0;
 }
 
+.fadeLayer {
+    display: none;
+    color: rgba(0,0,0,0.4);
+    opacity: 0.5;
+    z-index: 7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 .drop-down{
     height: 50vh;
     width: 50vw;
@@ -125,6 +137,36 @@ a:active {
     font-style: italic;
 }
 
+#workaround {
+    display: none;
+}
+
+li {
+    margin-bottom: 5vh;
+}
+
+#mailbox,ul {
+    list-style: none;
+}
+
+#mapbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-top: -30vh;
+    text-align: left;
+}
+
+#map {
+    box-shadow: 0px 3px 10px 1px rgba(0,0,0,0.4);
+    height: 50vh;
+    width: 75vw;
+    padding-left: 3.1vw;
+    filter: grayscale(100%);
+    z-index: 8;
+}
+
 /*----- TOGGLE-KLASSER -----*/
 
 .show {
@@ -139,6 +181,13 @@ a:active {
     opacity: 1;
 }
 
+.main_title.title_fade {
+    opacity: 1;
+}
+
+.visible {
+    display: block;
+}
 
 /*--------------------------------- RESPONSIVITET ------------------------------*/
 
@@ -152,15 +201,15 @@ a:active {
 
     .main_title {
         font-size: 10vh;
-        margin-top: -50px;
-        padding-left: 50px;
+        margin-bottom: 48vh;
         color: #F1F1F1;
+        opacity: 0;
+        transition: ease-in 1s;
     }
 
     .subtitle {
         font-size: 50px;
         margin-top: -13vh;
-        transition: ease-in 1s;
     }
 
     #homeSection {
@@ -191,8 +240,7 @@ a:active {
     .article {
         font-size: 3.3vw;
         width: 85vw;
-        margin-bottom: 10vh;
-        
+        margin-bottom: 40vh;
     }
 
     .prime_article {
@@ -208,7 +256,7 @@ a:active {
         box-shadow: -15px 0px 30px 5px rgba(0,0,0,0.4);
         margin-bottom: 10vh;
         opacity: 0;
-        transition: ease-in 1s;
+        transition: ease-out 1s;
     }
 
     .test {
@@ -264,8 +312,10 @@ a:active {
     .main_title {
         font-size: 20vh;
         margin-top: -30vh;
-        padding-bottom: 20vh;
+        margin-bottom: 35vh;
         color: #F1F1F1;
+        opacity: 0;
+        transition: ease-in 1s;
     }
 
     .subtitle {
@@ -294,8 +344,8 @@ a:active {
         padding-bottom: 5vh;    
         padding-left: 10vw;
         box-shadow: -15px 0px 30px 5px rgba(0,0,0,0.4);
-        margin-bottom: 10vh;
+        margin-bottom: 35vh;
         opacity: 0;
-        transition: ease-in 1s;
+        transition: ease-out 1s;
     }
 }
