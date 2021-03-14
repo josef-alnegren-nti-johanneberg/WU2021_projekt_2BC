@@ -2,6 +2,7 @@ body {
     margin: 0px;
     overflow-x: hidden;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: fixed url(../img/scott-webb-aHhhdKUP77M-unsplash.jpg);
 }
 
 body::-webkit-scrollbar {
@@ -23,7 +24,6 @@ body::-webkit-scrollbar {
 .drop-down{
     height: 50vh;
     width: 50vw;
-    background: #F1F1F1;
     position: fixed;
     top: -100vh;
     left: 0;
@@ -35,14 +35,16 @@ body::-webkit-scrollbar {
 
 .spread_item {
     display: flex;
-    color: #D24848;
+    color: #3B3B6B;
+    background: #f1f1f1;
     font-weight: bold;
     font-size: 20px;
-    transition: 0.1s;
+    transition: ease-out 0.2s;
 }
 
 .spread_item:hover {
-    background: #a1a1a1;
+    background: #00000073;
+    color: #f1f1f1;
 }
 
 .drop_button {
@@ -64,7 +66,6 @@ body::-webkit-scrollbar {
     ;
     grid-template-columns: 100vw;
     grid-template-rows: 100px auto 100px;
-    background-color: #3B3B6B;
 }
 
 .grid_wrapper > *,.section > * {
@@ -99,7 +100,7 @@ body::-webkit-scrollbar {
     width: 100vw;
     max-height: fit-content;
     color: #3B3B6B;
-    background-color: #F1F1F1;
+    background-color: #f1f1f1e1;
     justify-content: center;
     padding: 20px;
     padding-bottom: 5vh;    
@@ -248,7 +249,7 @@ li {
         text-align: left;
         max-height: fit-content;
         color: #F1F1F1;
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(0,0,0,0.4);
         justify-content: center;
         padding: 20px;
         padding-bottom: 5vh;    
@@ -311,6 +312,7 @@ li {
 
     .main_title {
         font-size: 20vh;
+        font-family: 'Courier New', Courier, monospace;
         margin-top: -30vh;
         margin-bottom: 35vh;
         color: #F1F1F1;
@@ -338,7 +340,7 @@ li {
         text-align: left;
         max-height: fit-content;
         color: #F1F1F1;
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(0,0,0,0.4);
         justify-content: center;
         padding: 20px;
         padding-bottom: 5vh;    

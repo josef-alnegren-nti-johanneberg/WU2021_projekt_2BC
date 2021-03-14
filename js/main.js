@@ -9,6 +9,5 @@ function showMenu() {
 }
 
 document.querySelector(".drop_button").addEventListener("click", showMenu)
-
 window.addEventListener("load", fadeIn)
 
