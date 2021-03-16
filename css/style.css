@@ -195,6 +195,7 @@ li {
     }
     .main_title {
         font-size: 10vh;
+        font-family: 'Courier New', Courier, monospace;
         margin-bottom: 48vh;
         color: #F1F1F1;
         opacity: 0;
