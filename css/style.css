@@ -23,16 +23,16 @@ body::-webkit-scrollbar {
 
 .spread_item {
     display: flex;
-    color: #3B3B6B;
-    background: #f1f1f1;
+    color: #f1f1f1;
+    background: #1b1b1b;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     transition: ease-out 0.2s;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .spread_item:hover {
     background: #00000073;
-    color: #f1f1f1;
 }
 
 .drop_button {
@@ -64,13 +64,14 @@ body::-webkit-scrollbar {
 .header {
     grid-area: he;
     background-color: #F1F1F1;
-    color: #3B3B6B;
+    color: #1b1b1b;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     position: fixed;
     width: 100vw;
     box-shadow: -15px 10px 15px -10px rgba(0, 0, 0, 0.75);
     z-index: 10;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .subtitle {
@@ -100,6 +101,7 @@ body::-webkit-scrollbar {
     width: 85vw;
     height: auto;
     filter: hue-rotate(80deg);
+    box-shadow: -15px 0px 30px 5px rgba(0, 0, 0, 0.4)
 }
 
 .prime_article {
@@ -108,6 +110,18 @@ body::-webkit-scrollbar {
 
 .underline {
     text-decoration: underline;
+}
+
+.topdiv {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    margin-top: 0;
+    margin-left: -5vw;
+    width: 90vw;
+    height: 10vh;
+    background-color: #1b1b1b;
+    color: #f1f1f1;
 }
 
 .footer {
@@ -138,6 +152,10 @@ a:active {
 
 li {
     margin-bottom: 5vh;
+}
+
+h3 {
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #mailbox, ul {
@@ -192,6 +210,8 @@ li {
     .header {
         top: 0;
         box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
+        align-items: center;
+        padding-left: 0;
     }
     .main_title {
         font-size: 10vh;
@@ -230,7 +250,14 @@ li {
         height: 10vh;
         justify-content: center;
         align-items: center;
+        letter-spacing: 0.4vw;
     }
+
+    .spread_item:hover {
+        background: #f1f1f1;
+        color: #D24848;
+    }
+
     .article {
         font-size: 3.3vw;
         width: 85vw;
@@ -251,6 +278,12 @@ li {
         opacity: 0;
         transition: ease-out 1s;
     }
+
+    .topdiv {
+        margin-left: -5vw;
+        width: 95vw;
+    }
+
     .test {
         max-width: 50%;
     }
@@ -292,6 +325,8 @@ li {
     }
     .header {
         top: 50px;
+        align-items: flex-start;
+        padding-left: 5vw;
     }
     .main_title {
         font-size: 20vh;
@@ -314,6 +349,11 @@ li {
         width: 80vw;
         font-size: 35px;
     }
+
+    .topdiv {
+        width: 90vw;
+    }
+
     #blurredcomputer {
         width: 90vw;
         margin-left: -5vw;
