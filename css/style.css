@@ -326,6 +326,10 @@ h3 {
         align-items: flex-start;
         padding-left: 5vw;
     }
+    .header_logo {
+        max-height: 80px;
+        margin: 10px;
+    }
     .main_title {
         font-size: 20vh;
         font-family: 'Courier New', Courier, monospace;
