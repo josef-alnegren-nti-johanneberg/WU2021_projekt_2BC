@@ -212,6 +212,11 @@ h3 {
         align-items: center;
         padding-left: 0;
     }
+    .header_logo {
+        max-height: 70px;
+        margin: 10px;
+        transition: 1s ease-in;
+    }
     .main_title {
         font-size: 10vh;
         font-family: 'Courier New', Courier, monospace;
@@ -219,6 +224,7 @@ h3 {
         color: #F1F1F1;
         opacity: 0;
         transition: ease-in 1s;
+        margin-left: 10vw;
     }
     .subtitle {
         font-size: 50px;
@@ -338,6 +344,7 @@ h3 {
         color: #F1F1F1;
         opacity: 0;
         transition: ease-in 1s;
+        margin-left: 0;
     }
     .subtitle {
         font-size: 60px;
