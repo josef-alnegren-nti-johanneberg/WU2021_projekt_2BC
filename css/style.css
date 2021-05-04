@@ -240,6 +240,10 @@ h3 {
     z-index: 8;
 }
 
+.footer_text {
+    font-size: 30px;
+}
+
 /*----- TOGGLE-KLASSER -----*/
 
 .show {
@@ -346,10 +350,11 @@ h3 {
     .topdiv {
         margin-left: -5vw;
         width: 95vw;
+        font-size: 30px;
     }
 
     .filler_text {
-        font-size: 3.3vw;
+        font-size: 30px;
     }
 
     #idebaset {
@@ -446,10 +451,11 @@ h3 {
 
     .topdiv {
         width: 90vw;
+        font-size: 3vw;
     }
 
     .filler_text {
-        font-size: 2vw;
+        font-size: 30px;
     }
 
     #blurredcomputer {
