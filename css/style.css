@@ -559,8 +559,8 @@ h3 {
 
 .add_smallArticle1 {
     grid-area: a1; 
-    background-color: rgb(65, 76, 173);
-
+    background-color: #F1F1F1;
+    padding: 30px;
 }
 
 .add_smallArticle2 {
@@ -570,7 +570,14 @@ h3 {
 }
 
 #chairs {
-    height: 50%;
+    height: 100%;
+    width: auto;
+    display: block;
+    transition: ease-in-out 0.5s;
+}
+
+#chairs:hover {
+    transform: scale(1.2);
 }
 
 .add_smallArticle3 {
