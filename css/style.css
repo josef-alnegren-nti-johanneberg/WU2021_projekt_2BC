@@ -566,7 +566,6 @@ h3 {
 .add_smallArticle2 {
     grid-area: a2; 
     overflow: hidden;
-    
 }
 
 #chairs {
@@ -582,14 +581,23 @@ h3 {
 
 .add_smallArticle3 {
     grid-area: a3; 
-    background-color: rgb(16, 110, 153);
+    overflow: hidden;
+}
 
+#palme {
+    height: 100%;
+    width: auto;
+    display: block;
+    transition: ease-in-out 0.5s;
+}
+
+#palme:hover {
+    transform: scale(1.2);
 }
 
 .add_smallArticle4 {
     grid-area: a4; 
     background-color: rgba(0, 0, 0, 0.4);
-    box-shadow: -15px 0px 30px 5px rgba(0, 0, 0, 0.4);
     color: #F1F1F1;
     padding: 30px;
 
