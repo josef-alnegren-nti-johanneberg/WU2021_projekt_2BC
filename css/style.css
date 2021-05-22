@@ -176,9 +176,9 @@ body::-webkit-scrollbar {
     padding-top: 2vh;
     font-size: 12px;
     z-index: 7;
+    flex-direction: column;
     justify-content: flex-end;
     border-bottom: dashed  #f1f1f118 2px;
-
 }
 
 .indent {
@@ -500,5 +500,86 @@ h3 {
         width: auto;
     }
 
+
+}
+
+
+/*--------------------------------------------- ADDITIONAL GRID (komplettering) ---------------------------------------------*/
+
+#additional_grid_wrapper {
+    display: grid;
+    grid-template-areas: 
+    "se1 se1 se1 se1 se1 as"
+    "a1 a2 se2 se2 se2 as"
+    "a3 a4 se2 se2 se2 as"
+    "se3 se3 se3 se3 a5 as"
+    "fo fo fo fo fo fo"
+    ;
+    grid-template-rows: repeat(5, 1fr) auto;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 50px;
+    gap: 20px;
+}
+
+#additional_grid_wrapper > * {
+    padding: 30px;
+}
+
+.add_section1 {
+    grid-area: se1;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 5vh;
+    padding-left: 10vw;
+    box-shadow: -15px 0px 30px 5px rgba(0, 0, 0, 0.4);
+    color: #F1F1F1;
+}
+
+.add_section2 {
+    grid-area: se2;
+    background-color: rgb(18, 114, 82);
+
+}
+
+.add_section3 {
+    grid-area: se3;
+    background-color: blue;
+
+}
+
+.add_aside {
+    grid-area: as;
+    background-color: #F1F1F1;
+
+}
+
+.add_smallArticle1 {
+    grid-area: a1; 
+    background-color: rgb(65, 76, 173);
+
+}
+
+.add_smallArticle2 {
+    grid-area: a2; 
+    background-color: rgb(139, 34, 34);
+
+}
+
+.add_smallArticle3 {
+    grid-area: a3; 
+    background-color: rgb(16, 110, 153);
+
+}
+
+.add_smallArticle4 {
+    grid-area: a4; 
+    background-color: rgb(55, 94, 16);
+
+}
+
+.add_bigArticle {
+    grid-area: a5; 
+    background-color: darkcyan;
 
 }
