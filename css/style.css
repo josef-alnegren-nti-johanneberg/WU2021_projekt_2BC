@@ -541,7 +541,8 @@ h3 {
 
 .add_section2 {
     grid-area: se2;
-    background-color: rgb(18, 114, 82);
+    background-image: url(../img/deskworker.jpg);
+    background-size: 2500px auto;
 }
 
 #fadebox {
@@ -551,11 +552,13 @@ h3 {
     padding-right: 10vw;
     background-color: rgba(0, 0, 0, 0.4);
     color: #F1F1F1;
-    opacity: 0.6;
+    filter: blur(5px);
     transition: ease-in-out 0.3s;
+    opacity: 0.6;
 }
 
 #fadebox:hover {
+    filter: blur(0);
     opacity: 1;
 }
 
@@ -622,10 +625,12 @@ h3 {
     width: auto;
     display: block;
     transition: ease-in-out 0.3s;
+    filter: blur(5px);
 }
 
 #chairs:hover {
-    transform: scale(1.1);
+    transform: scale(1.06);
+    filter: blur(0);
 }
 
 .add_smallArticle3 {
@@ -638,10 +643,12 @@ h3 {
     width: auto;
     display: block;
     transition: ease-in-out 0.3s;
+    filter: blur(5px);
 }
 
 #palme:hover {
-    transform: scale(1.2);
+    transform: scale(1.06);
+    filter: blur(0);
 }
 
 .add_smallArticle4 {
@@ -649,14 +656,25 @@ h3 {
     background-color: rgba(0, 0, 0, 0.4);
     color: #F1F1F1;
     padding: 30px;
-
-
 }
 
 .add_bigArticle {
     grid-area: a5; 
-    background-color: darkcyan;
+    overflow: hidden;
 
+}
+
+#bulb {
+    height: auto;
+    width: 120%;
+    display: block;
+    transition: ease-in-out 0.3s;
+    filter: blur(5px);
+}
+
+#bulb:hover {
+    transform: scale(1.06);
+    filter: blur(0);
 }
 
 .add_footer {
