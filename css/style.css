@@ -217,6 +217,7 @@ li {
 
 h3 {
     font-family: 'Courier New', Courier, monospace;
+    font-size: inherit;
 }
 
 #mailbox, ul {
@@ -228,7 +229,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     margin-top: -30vh;
-    text-align: left;
+    text-align: center;
 }
 
 #map {
@@ -381,6 +382,10 @@ h3 {
     #printer {
         width: 80vw;
     }
+
+    h3 {
+        font-size: 30px;
+    }
 }
 
 /*----- DESKTOP -----*/
@@ -513,16 +518,12 @@ h3 {
     "a1 a2 se2 se2 se2 as"
     "a3 a4 se2 se2 se2 as"
     "se3 se3 se3 se3 a5 as"
-    "fo fo fo fo fo fo"
+    "fo1 fo1 fo1 fo1 fo1 fo1"
     ;
     grid-template-rows: repeat(5, 1fr) auto;
     grid-template-columns: repeat(6, 1fr);
     margin-top: 50px;
     gap: 20px;
-}
-
-#additional_grid_wrapper > * {
-    padding: 30px;
 }
 
 .add_section1 {
@@ -531,9 +532,11 @@ h3 {
     justify-content: center;
     padding: 20px;
     padding-bottom: 5vh;
-    padding-left: 10vw;
+    padding-left: 5vw;
     box-shadow: -15px 0px 30px 5px rgba(0, 0, 0, 0.4);
     color: #F1F1F1;
+    font-size: 3.3vw;
+    text-align: left;
 }
 
 .add_section2 {
@@ -544,7 +547,7 @@ h3 {
 
 .add_section3 {
     grid-area: se3;
-    background-color: blue;
+    background-color: #F1F1F1;
 
 }
 
@@ -562,8 +565,12 @@ h3 {
 
 .add_smallArticle2 {
     grid-area: a2; 
-    background-color: rgb(139, 34, 34);
+    overflow: hidden;
+    
+}
 
+#chairs {
+    height: 50%;
 }
 
 .add_smallArticle3 {
@@ -574,7 +581,11 @@ h3 {
 
 .add_smallArticle4 {
     grid-area: a4; 
-    background-color: rgb(55, 94, 16);
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: -15px 0px 30px 5px rgba(0, 0, 0, 0.4);
+    color: #F1F1F1;
+    padding: 30px;
+
 
 }
 
@@ -582,4 +593,33 @@ h3 {
     grid-area: a5; 
     background-color: darkcyan;
 
+}
+
+.add_footer {
+    grid-area: fo1;
+    height: 300px;
+    display: flex;
+    color: #f1f1f1;
+    text-align: center;
+    padding-top: 2vh;
+    font-size: 12px;
+    z-index: 7;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-bottom: dashed  #f1f1f118 2px;
+    padding: 0px;
+}
+
+.add_indent {
+    grid-area: fo1;
+    border-top: 0 solid #1b1b1b;
+    border-left: 0 solid #1b1b1b; 
+    border-bottom: 0 solid #1b1b1b;
+    border-right: 0 solid #1b1b1b;
+    border-top-width: 60px;
+    border-left-width: 50vw;
+    border-right-width: 50vw;
+    border-bottom-width: 40vh;
+    border-top-color: transparent;
+    padding: 0px;
 }
