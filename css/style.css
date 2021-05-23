@@ -273,6 +273,7 @@ h3 {
 
 @media screen and (min-width:1px) {
     .header {
+        display: flex;
         top: 0;
         box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
         align-items: center;
@@ -308,10 +309,6 @@ h3 {
         justify-content: space-around;
         box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.75);
         margin-left: 10px;
-    }
-
-    .drop_button {
-    height: auto;
     }
 
     .spread_item {
@@ -510,26 +507,13 @@ h3 {
 
 
 /*--------------------------------------------- ADDITIONAL GRID (komplettering) ---------------------------------------------*/
-
-#additional_grid_wrapper {
-    display: grid;
-    grid-template-areas: 
-    "se1 se1 se1 se1 se1 as"
-    "a1 a2 se2 se2 se2 as"
-    "a3 a4 se2 se2 se2 as"
-    "se3 se3 se3 se3 a5 as"
-    "fo1 fo1 fo1 fo1 fo1 fo1"
-    ;
-    grid-template-rows: repeat(5, 1fr) auto;
-    grid-template-columns: repeat(6, 1fr);
-    margin-top: 50px;
-    gap: 20px;
-}
-
 .add_section1 {
     grid-area: se1;
+    display: flex;
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.4);
     justify-content: center;
+    align-items: left;
     padding: 20px;
     padding-bottom: 5vh;
     padding-left: 5vw;
@@ -586,7 +570,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin-top: -60px;
+    margin-top: 25px;
 }
 
 .as_card {
@@ -661,7 +645,7 @@ h3 {
 .add_bigArticle {
     grid-area: a5; 
     overflow: hidden;
-
+    filter: grayscale(100%);
 }
 
 #bulb {
@@ -704,4 +688,280 @@ h3 {
     border-bottom-width: 40vh;
     border-top-color: transparent;
     padding: 0px;
+}
+
+
+/*--------------------------------------------- ADDITIONAL GRID [RESPONSIVITET] (komplettering) ---------------------------------------------*/
+
+@media screen and (min-width: 1px) {
+
+    #additional_grid_wrapper {
+        display: grid;
+        grid-template-areas: 
+        "se1"
+        "se2"
+        "as"
+        "se3"
+        "fo1"
+        ;
+        grid-template-rows: 300px 800px 1100px 500px auto;
+        grid-template-columns: 100%;
+        margin-top: 50px;
+        gap: 20px;
+    }
+
+    .add_aside {
+        margin: 0;
+    }
+
+    .as_card {
+        width: 80vw;
+    }
+
+    #logobox {
+        display: none;
+    }
+
+    #fadebox {
+        filter: none;
+        opacity: 1;
+    }
+
+    .add_section2 {
+        display: flex;
+        background-size: auto;
+        align-items: center;
+    }
+
+    .add_section3 {
+        font-size: 0.9rem;
+    }
+
+    .add_smallArticle1 {
+        display: none;
+    }
+
+    .add_smallArticle2 {
+        display: none;
+    }
+
+    .add_smallArticle3 {
+        display: none;
+    }
+
+    .add_smallArticle4 {
+        display: none;
+    }
+
+    .add_bigArticle {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    #additional_grid_wrapper {
+        display: grid;
+        grid-template-areas: 
+        "se1 se1 se1 se1 se1 as"
+        "a1 a2 se2 se2 se2 as"
+        "a3 a4 se2 se2 se2 as"
+        "se3 se3 se3 se3 a5 as"
+        "fo1 fo1 fo1 fo1 fo1 fo1"
+        ;
+        grid-template-rows: repeat(5, 1fr) auto;
+        grid-template-columns: repeat(6, 1fr);
+        margin-top: 50px;
+        gap: 20px;
+    }
+    
+    .add_section1 {
+        grid-area: se1;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.4);
+        justify-content: center;
+        align-items: left;
+        padding: 20px;
+        padding-bottom: 5vh;
+        padding-left: 5vw;
+        box-shadow: -15px 0px 30px 5px rgba(0, 0, 0, 0.4);
+        color: #F1F1F1;
+        font-size: 3.3vw;
+        text-align: left;
+    }
+
+    .add_section2 {
+        grid-area: se2;
+        background-image: url(../img/deskworker.jpg);
+        background-size: 2500px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #fadebox {
+        padding-left: 10vw;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        padding-right: 10vw;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #F1F1F1;
+        filter: blur(5px);
+        transition: ease-in-out 0.3s;
+        opacity: 0.6;
+    }
+
+    #fadebox:hover {
+        filter: blur(0);
+        opacity: 1;
+    }
+
+    .add_section3 {
+        grid-area: se3;
+        background-color: #F1F1F1;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.3rem;
+    }
+
+    #list1 {
+        line-height: 0;
+    }
+
+    #list2 {
+        line-height: 0.95;
+    }
+    .add_aside {
+        grid-area: as;
+        background-color: #F1F1F1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 25px;
+    }
+
+    .as_card {
+        background-color: #F1F1F1;
+        box-shadow: -15px 0px 30px 5px rgba(0, 0, 0, 0.2);
+        width: 10vw;
+        height: fit-content;
+        padding: 30px;
+    }
+
+    #logobox {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #as_logo {
+        width: 80%;
+        height: auto;
+    }
+
+    .add_smallArticle1 {
+        grid-area: a1; 
+        background-color: #F1F1F1;
+        padding: 30px;
+        display: block;
+    }
+
+    .add_smallArticle2 {
+        grid-area: a2; 
+        overflow: hidden;
+        display: block;
+    }
+
+    #chairs {
+        height: 100%;
+        width: auto;
+        display: block;
+        transition: ease-in-out 0.3s;
+        filter: blur(5px);
+    }
+
+    #chairs:hover {
+        transform: scale(1.06);
+        filter: blur(0);
+    }
+
+    .add_smallArticle3 {
+        grid-area: a3; 
+        overflow: hidden;
+        display: block;
+    }
+
+    #palme {
+        height: 100%;
+        width: auto;
+        display: block;
+        transition: ease-in-out 0.3s;
+        filter: blur(5px);
+    }
+
+    #palme:hover {
+        transform: scale(1.06);
+        filter: blur(0);
+    }
+
+    .add_smallArticle4 {
+        grid-area: a4; 
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #F1F1F1;
+        padding: 30px;
+        display: block;
+    }
+
+    .add_bigArticle {
+        grid-area: a5; 
+        overflow: hidden;
+        display: block;
+    }
+
+    #bulb {
+        height: auto;
+        width: 120%;
+        display: block;
+        transition: ease-in-out 0.3s;
+        filter: blur(5px);
+    }
+
+    #bulb:hover {
+        transform: scale(1.06);
+        filter: blur(0);
+    }
+
+    .add_footer {
+        grid-area: fo1;
+        height: 300px;
+        display: flex;
+        color: #f1f1f1;
+        text-align: center;
+        padding-top: 2vh;
+        font-size: 12px;
+        z-index: 7;
+        flex-direction: column;
+        justify-content: flex-end;
+        border-bottom: dashed  #f1f1f118 2px;
+        padding: 0px;
+    }
+
+    .add_indent {
+        grid-area: fo1;
+        border-top: 0 solid #1b1b1b;
+        border-left: 0 solid #1b1b1b; 
+        border-bottom: 0 solid #1b1b1b;
+        border-right: 0 solid #1b1b1b;
+        border-top-width: 60px;
+        border-left-width: 50vw;
+        border-right-width: 50vw;
+        border-bottom-width: 40vh;
+        border-top-color: transparent;
+        padding: 0px;
+    }
 }
